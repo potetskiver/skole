@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
-  return (
+  /*return (
     <div className={styles.page}>
       <main className={styles.main}>
         <Image
@@ -62,5 +62,17 @@ export default function Home() {
         </div>
       </main>
     </div>
-  );
+  );*/
+  return(
+    <section className={styles.page}>
+      <div className={styles.top}>
+        <h1>Hei vørld!</h1>
+        <p>Startside ahh</p>
+      </div>
+      <div className={styles.center}>
+        <img src="/next.svg" alt="Next.js logo" width={100*5} height={20*5}></img>
+        <img src="/vercel.svg" alt="Vercel logo" width={16*5} height={16*5}></img>
+      </div>
+    </section>
+  )
 }
