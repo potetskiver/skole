@@ -1,8 +1,6 @@
-type HeaderProps = {
-  name: string;
-};
 
-export default function Header({ name }: HeaderProps) {
+
+export default function Header({ name }: {name:string}) {
     return (
         <header style={{background: "#000", color: "#fff", padding: "12px 0"}}>
             <div style={{maxWidth: "1024px", margin: "0 auto", padding: "0 16px", display: "flex", alignItems: "center", justifyContent: "space-between"}}>
