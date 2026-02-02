@@ -1,8 +1,13 @@
-export default function Header(){
+type HeaderProps = {
+  name: string;
+};
+
+export default function Header({ name }: HeaderProps) {
     return (
         <header style={{background: "#000", color: "#fff", padding: "12px 0"}}>
-            <div style={{maxWidth: "1024px", margin: "0 auto", padding: "0 16px"}}>
-                <h1>Skole Header</h1>
+            <div style={{maxWidth: "1024px", margin: "0 auto", padding: "0 16px", display: "flex", alignItems: "center", justifyContent: "space-between"}}>
+                <h1 style={{ margin: 0, lineHeight: 1 }}>Skole Header</h1>
+                <h2 style={{ margin: 0, lineHeight: 1 }}>Velkommen {name}</h2>
             </div>
         </header>
     )
