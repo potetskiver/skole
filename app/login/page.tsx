@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useSession, signIn, getSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
@@ -12,7 +12,7 @@ export default function LoginPage() {
 
   useEffect(() => { if (session?.user) router.replace("/"); }, [session, router]);
 
-  async function handleLogin(e: React.FormEvent<HTMLFormElement>) {
+  async function handleLogin(e: React.ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
 
